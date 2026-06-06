@@ -86,7 +86,7 @@ async function executeChatFlow(model: BaseChatModel, options: ProviderOptions): 
       checkpointer,
     })
     //debug - Jim Wang
-    console.log('[DEBUG] Sending messages:', JSON.stringify(options.messages, null, 2))
+    //console.log('[DEBUG] Sending messages:', JSON.stringify(options.messages, null, 2))
     const stream = await agent.stream(
       {
         messages: options.messages,
@@ -132,7 +132,7 @@ async function executeAgentFlow(model: BaseChatModel, options: AgentOptions): Pr
       checkpointer,
     })
     //debug - Jim Wang
-    console.log('[DEBUG] Sending messages:', JSON.stringify(options.messages, null, 2))
+    //console.log('[DEBUG] Sending messages:', JSON.stringify(options.messages, null, 2))
     const stream = await agent.stream(
       {
         messages: options.messages,
