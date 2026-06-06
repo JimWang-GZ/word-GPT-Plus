@@ -105,14 +105,14 @@
                 :placeholder="
                   settingPreset.api.optionObj
                     .find(option => option.value === settingForm.api)
-                    ?.label.replace('official', 'OpenAI') || settingForm.api
+                    ?.label.replace('official', 'IntertekCHNAI') || settingForm.api
                 "
               >
                 <template #item="{ item }">
                   {{
                     settingPreset.api.optionObj
                       .find(option => option.value === item)
-                      ?.label.replace('official', 'OpenAI') || item
+                      ?.label.replace('official', 'IntertekCHNAI') || item
                   }}
                 </template>
               </SingleSelect>
