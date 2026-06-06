@@ -1,6 +1,8 @@
 type IStringKeyMap = Record<string, any>
+//remark by Jim, limited to IntertekCHN AI only
+//type supportedPlatforms = 'official' | 'azure' | 'gemini' | 'ollama' | 'groq'
+type supportedPlatforms = 'official'
 
-type supportedPlatforms = 'official' | 'azure' | 'gemini' | 'ollama' | 'groq'
 
 type insertTypes = 'replace' | 'append' | 'newLine' | 'NoAction'
 
