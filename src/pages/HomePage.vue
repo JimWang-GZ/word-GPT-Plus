@@ -683,11 +683,19 @@ async function processChat(userMessage: HumanMessage, systemMessage?: string) {
 
   const defaultSystemMessage = new SystemMessage(finalSystemMessage)
 
+  // modify by  Jim - 1 create SystemMessage and set fixed ID manually
+  defaultSystemMessage.id = 'main_system_message'  // ← 关键！让 checkpointer 识别这是同一个消息
+
   // Add user message to history
   history.value.push(userMessage)
 
   // Prepare messages for LLM (always include system message first, followed by all history)
-  const finalMessages = [defaultSystemMessage, ...history.value]
+  //remark by Jim -2
+  //const finalMessages = [defaultSystemMessage, ...history.value]
+  //  修改 2：只发 system + 当前用户消息，不要带完整 history
+  // 因为 checkpointer 会自动从 IndexedDB 读取历史并合并
+  const finalMessages = [defaultSystemMessage, userMessage]
+            
   // Build provider configuration
   const providerConfigs: Record<string, any> = {
     official: {
