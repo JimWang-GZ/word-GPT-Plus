@@ -20,16 +20,15 @@
   <Description DefaultValue="Integrate the Power of AI Directly into Word"/>
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
-  <IconUrl DefaultValue="https://word.msq.pub/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://word.msq.pub/assets/icon-64.png"/>
+  <IconUrl DefaultValue="https://word-gpt-plus.vercel.app/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://word-gpt-plus.vercel.app/assets/icon-64.png"/>
 
   <!--If you plan to submit this add-in to the Office Store, uncomment the SupportUrl element below-->
-  <SupportUrl DefaultValue="https://github.com/Kuingsmile/word-GPT-Plus" />
+  <SupportUrl DefaultValue="https://github.com/JimWang-GZ/word-GPT-Plus" />
 
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
   <AppDomains>
-    <AppDomain>https://word.msq.pub</AppDomain>
-    <AppDomain>https://horosama.com</AppDomain>
+    <AppDomain>https://word-gpt-plus.vercel.app</AppDomain>
   </AppDomains>
   <!--End Basic Settings. -->
 
@@ -38,7 +37,7 @@
     <Host Name="Document" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://word.msq.pub/index.html" />
+    <SourceLocation DefaultValue="https://word-gpt-plus.vercel.app/index.html" />
   </DefaultSettings>
   <!-- End TaskPane Mode integration.  -->
 
@@ -118,14 +117,14 @@
     <!-- You can use resources across hosts and form factors. -->
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://word.msq.pub/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://word.msq.pub/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://word.msq.pub/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://word-gpt-plus.vercel.app/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://word-gpt-plus.vercel.app/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://word-gpt-plus.vercel.app/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
-        <bt:Url id="Commands.Url" DefaultValue="https://word.msq.pub/commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://word.msq.pub/index.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://word-gpt-plus.vercel.app/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://word-gpt-plus.vercel.app/index.html" />
       </bt:Urls>
       <!-- ShortStrings max characters==125. -->
       <bt:ShortStrings>
