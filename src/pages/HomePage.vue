@@ -687,26 +687,7 @@ async function processChat(userMessage: HumanMessage, systemMessage?: string) {
   history.value.push(userMessage)
 
   // Prepare messages for LLM (always include system message first, followed by all history)
-  // Remarked by Jim Wang 20260606
-  //const finalMessages = [defaultSystemMessage, ...history.value]
-  // Prepare messages for LLM (always include system message first, followed by all history)
-	//added by Jim 20260606  
-	//  [修复 vLLM 400 报错] 强制清洗历史记录中的冗余 SystemMessage
-	const safeHistory = history.value.map((msg) => {
-	  // 在 LangChain JS 中，可以通过 _getType() 或是判断构造函数来识别 SystemMessage
-	  const isSystem = (typeof msg._getType === 'function' && msg._getType() === 'system') || 
-					   msg.constructor.name === 'SystemMessage';
-	  
-	  if (isSystem) {
-		// 强制将夹在中间的系统消息降级为普通的用户消息，彻底绕过 DeepSeek-R1 / vLLM 的严格校验
-		return new HumanMessage(`[System Context] ${msg.content || ''}`);
-	  }
-	  return msg;
-	});
-
-	// 最终组装：确保真正的 System 只有最开头的那一个！
-	const finalMessages = [defaultSystemMessage, ...safeHistory];
-	//end of adding by Jim
+  const finalMessages = [defaultSystemMessage, ...history.value]
   // Build provider configuration
   const providerConfigs: Record<string, any> = {
     official: {
