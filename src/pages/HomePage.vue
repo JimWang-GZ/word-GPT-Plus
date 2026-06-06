@@ -181,7 +181,7 @@
               class="h-7 max-w-full min-w-0 cursor-pointer rounded-md border border-border bg-surface p-1 text-xs text-secondary hover:border-accent focus:outline-none disabled:cursor-not-allowed disabled:bg-secondary"
             >
               <option v-for="item in settingPreset.api.optionObj" :key="item.value" :value="item.value">
-                {{ item.label.replace('official', 'OpenAI') }}
+                {{ item.label.replace('official', 'IntertekCHNAI') }}
               </option>
             </select>
             <select
