@@ -45,26 +45,30 @@ export const languageMap: IStringKeyMap = {
 
 export const availableAPIs: IStringKeyMap = {
   official: 'official',
-  azure: 'azure',
-  gemini: 'gemini',
-  ollama: 'ollama',
-  groq: 'groq',
+// remark by Jim, limited to IntertekCHNAI only
+//  azure: 'azure',
+//  gemini: 'gemini',
+//  ollama: 'ollama',
+//  groq: 'groq',
 }
 
 // official API 可用的模型
 export const availableModels: string[] = [
-  'gpt-5.2',
-  'gpt-5.1',
-  'gpt-5.1-mini',
-  'gpt-5',
-  'gpt-5-mini',
-  'gpt-5-nano',
-  'gpt-4.1',
-  'gpt-4.1-mini',
-  'gpt-4.1-nano',
-  'gpt-4o',
-  'o1',
-  'o3',
+  //remark by Jim
+  //'gpt-5.2',
+  //'gpt-5.1',
+  //'gpt-5.1-mini',
+  //'gpt-5',
+  //'gpt-5-mini',
+  //'gpt-5-nano',
+  //'gpt-4.1',
+  //'gpt-4.1-mini',
+  //'gpt-4.1-nano',
+  //'gpt-4o',
+  //'o1',
+  //'o3',
+  //added by Jim
+  'deepseek-r1-32b',
 ]
 
 // Gemini API 可用的模型
