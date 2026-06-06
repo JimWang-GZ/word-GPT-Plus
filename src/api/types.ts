@@ -50,8 +50,10 @@ export interface AzureOptions extends BaseChatCompletionOptions {
 }
 
 export type ProviderOptions = OpenAIOptions | OllamaOptions | GroqOptions | GeminiOptions | AzureOptions
+//limited to Official only - by Jim Wang 2026-06-06
+//type supportedProviders = 'official' | 'ollama' | 'groq' | 'gemini' | 'azure'
+type supportedProviders = 'official'
 
-type supportedProviders = 'official' | 'ollama' | 'groq' | 'gemini' | 'azure'
 // Agent options with tools support
 export interface AgentOptions extends BaseChatCompletionOptions {
   provider: supportedProviders
